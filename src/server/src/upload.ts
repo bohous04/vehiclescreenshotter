@@ -33,8 +33,8 @@ export async function HandleUpload(req: Request, res: Response) {
 			path.join(__dirname, "../backup", fileName + ".png")
 		);
 
-		const buffer = await RemoveBackground(fs.readFileSync(destinationPath));
-		fs.writeFileSync(destinationPath, buffer);
+		// const buffer = await RemoveBackground(fs.readFileSync(destinationPath));
+		// fs.writeFileSync(destinationPath, buffer);
 		await optimizeImage(destinationPath);
 		await compressAndConvertToWebP(
 			destinationPath,

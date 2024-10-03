@@ -1,29 +1,26 @@
 # propscreenshotter
 
-Script for FiveM that takes screenshots of ingame models, and them processes the images.
+Edited script for FiveM that takes screenshots of vehicles, and processes the images.
 
-> **Warning** <br>
-> This script uses [rembg](https://github.com/danielgatis/rembg) to process images.
-> It will **NOT** work without. <br>
-> It also only works on a local development server.
+> **Deps** <br>
+> [rembg](https://github.com/danielgatis/rembg)
+> [ox_lib](https://github.com/overextended/ox_lib)
+> [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
+> [NodeJS](https://nodejs.org/)
+> [pnpm](https://overextended.dev/guides/pnpm)
 
-### Preview
-
-https://github.com/borisnliscool/propscreenshotter/assets/60477582/ae856b9f-9aab-4f64-ab96-305f522fb6ae
-
-### Requirements
-- Typescript
-- pnpm
-- [NodeJS v18](https://nodejs.org/)
-- [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
-- [rembg](https://github.com/danielgatis/rembg) at port 5000
+### Instaling rembg
+- Download latest [release version](https://github.com/danielgatis/rembg/releases)
+- Open and instal rembg-cli-installer.exe
+- Open windows terminal and insert this command ```pip install rembg```
+- Next command ```pip install "rembg[cli]"```
 
 ### Usage
-- Make sure to have rembg running at port 5000 (I recommend using docker)
-- Make sure screenshot-basic is running
+- Start rembg with command into windows terminal ```rembg s --host 0.0.0.0 --port 5000 --log_level info```
 - Navigate to `src/server` and run `pnpm install & pnpm start`
-- Enter FiveM and run `screenmodel <model name>`
+- Enter FiveM and run `/screenvehicle <model name>` or `/screenCurrVeh` or `/screenallvehicles`
 - Find the ouptut in `src/server/uploads`
 
-### Support
-Limited as I don't see many people actually using this, but you can try in my [discord](https://boris.foo/discord).
+- If you are using screenallvehicles your game will propably crash, just after you reconnect use command `/saveVehicles` after that you can restart the script and you won't take pictures that are already taken
+
+- If the vehicle doesn't fit in the picture you can edit value of variable `distanceMultiplier`
