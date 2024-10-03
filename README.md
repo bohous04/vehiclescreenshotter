@@ -2,12 +2,12 @@
 
 Edited script for FiveM that takes screenshots of vehicles, and processes the images.
 
-> **Deps** <br>
-> [rembg](https://github.com/danielgatis/rembg)
-> [ox_lib](https://github.com/overextended/ox_lib)
-> [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
-> [NodeJS](https://nodejs.org/)
-> [pnpm](https://overextended.dev/guides/pnpm)
+### Deps
+- [rembg](https://github.com/danielgatis/rembg)
+- [ox_lib](https://github.com/overextended/ox_lib)
+- [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
+- [NodeJS](https://nodejs.org/)
+- [pnpm](https://overextended.dev/guides/pnpm)
 
 ### Instaling rembg
 - Download latest [release version](https://github.com/danielgatis/rembg/releases)
